@@ -8,6 +8,14 @@ theme: jekyll-theme-chirpy
 # otherwise, the layout language will use the default value of 'en'.
 lang: #[en | ja-JP | zh]
 
+plugins:
+  - jekyll-polyglot
+
+# 2. 多言語設定の追加
+languages: ["en", "ja"]
+default_lang: "en"
+exclude_from_localization: ["assets", "javascript", "css", "sw.js"] # 静的ファイルは除外
+
 # Change to your timezone › https://zones.arilyn.cc
 timezone: Asia/Tokyo
 

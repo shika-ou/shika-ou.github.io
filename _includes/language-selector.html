@@ -1,0 +1,12 @@
+<div class="language-selector" style="padding: 1rem 0.5rem;">
+  {% assign langs = site.languages %}
+  {% for lang in langs %}
+    <a
+      href="{{ site.baseurl }}/{{ lang }}{{ page.url }}"
+      style="margin-right: 5px; text-decoration: none; {% if lang == site.active_lang %}font-weight: bold; color: var(--link-color);{% else %}color: var(--sidebar-muted-color);{% endif %}"
+    >
+      {{ lang | upcase }}
+    </a>
+    {% unless forloop.last %}|{% endunless %}
+  {% endfor %}
+</div>
